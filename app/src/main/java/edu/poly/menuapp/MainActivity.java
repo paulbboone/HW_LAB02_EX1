@@ -1,6 +1,7 @@
 package edu.poly.menuapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -28,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 //    @Override
-    public <Menu_DemoActivity> boolean onMenuItemSelected(int featureId, MenuItem item) {
-        Toast.makeText(Menu_DemoActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
+    public boolean onMenuItemSelected(@NonNull MenuItem item) {
+        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
         return true;
     }
 
@@ -40,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 //    @Override
-    public <Menu_DemoActivity> boolean onContextItemSelected(MenuItem item) {
-        Toast.makeText(Menu_DemoActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show();
+    public  boolean onContextItemSelected(MenuItem item) {
+        Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
         return true;
     }
 }
